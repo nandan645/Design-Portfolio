@@ -1,0 +1,154 @@
+body {
+    background-color: #191919;
+    margin: 0;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 2em 26%;
+}
+
+#about {
+    padding: 1em 1%;
+    text-align: left;
+    color: white;
+}
+
+.about p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.about h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+#portfolio {
+    padding: 0em 0;
+    text-align: left;
+}
+
+.portfolio h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 1%;
+    color: white;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 1em);
+    margin: 0.5em;
+    background: #2f2f2f;
+    border: 1px solid #191919;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item a {
+    text-decoration: none;
+}
+
+.card-description {
+    padding: 1em;
+    text-align: left;
+    color: white;
+}
+
+.card-description h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 0;
+}
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.display-item {
+    flex: 1 1 100%;
+    margin: 0.5em 0;
+    background: #2f2f2f;
+    border: 1px solid #191919;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.display-item img {
+    width: 100%;
+    height: auto;
+}
+
+.display-card-description {
+    padding: 1em;
+    text-align: left;
+    color: white;
+}
+
+.display-card-description h3 {
+    margin-top: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    font-size: 1.3em;
+}
+
+.display-card-description p {
+    margin-top: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight:300;
+    font-style: normal;
+}
+
+.showcase h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1em 0%;
+    font-size: 2em;
+    color: white;
+    
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+        margin: 0.5em 0;
+    }
+
+    body {
+        padding: 0 2%;
+    }
+
+    main {
+        padding: 2em 5%;
+    }
+}
