@@ -24,6 +24,12 @@ main {
     margin-left: 0.5em;
 }
 
+.back-button {
+    padding-top: 2em;
+    height: 20px; /* Adjust the size as needed */
+}
+
+
 #about {
     padding: 1em 1%;
     text-align: left;
@@ -143,6 +149,7 @@ main {
     font-weight: 400;
     font-style: normal;
     padding: 1em 0%;
+    padding-top: 0.5em;
     font-size: 2em;
     color: white;
     
