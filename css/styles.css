@@ -9,6 +9,21 @@ main {
     padding: 2em 26%;
 }
 
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em; /* Adds some space below the container */
+}
+
+.small-image {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 2px; /* Optional: adds rounded corners */
+    margin-right: 1em; /* Space between the image and the text */
+    margin-top: 1em;
+    margin-left: 0.5em;
+}
+
 #about {
     padding: 1em 1%;
     text-align: left;
@@ -135,6 +150,17 @@ main {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
+
+    .image-container {
+        flex-direction: column; /* Stack the image and text vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .small-image {
+        margin-right: 0; /* Remove the right margin */
+        margin-top: 2em;
+        margin-left: 0.5em;
+    }
     .gallery {
         flex-direction: column;
     }
@@ -150,5 +176,25 @@ main {
 
     main {
         padding: 2em 5%;
+    }
+}
+
+
+/* Media Query for Tablet Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        padding: 0 3%; /* Reduce side padding */
+    }
+
+    main {
+        padding: 2em 15%; /* Reduce main padding */
+    }
+
+    .about p {
+        margin-top: 0em; /* Reduce the gap between h1 and p */
+    }
+
+    .about h1 {
+        margin-bottom: 0.5em;
     }
 }
