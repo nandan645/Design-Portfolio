@@ -8,31 +8,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndices = [];
+
+document.querySelectorAll('.slideshow-container').forEach((container, index) => {
+    slideIndices[index] = 1;
+    showSlides(1, index);
+});
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(n, no) {
+    showSlides(slideIndices[no] += n, no);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function showSlides(n, no) {
+    let i;
+    let container = document.querySelectorAll('.slideshow-container')[no];
+    let slides = container.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndices[no] = 1 }
+    if (n < 1) { slideIndices[no] = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndices[no] - 1].style.display = "block";
 }
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-} 
