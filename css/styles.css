@@ -172,7 +172,7 @@ main {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: rgb(212, 212, 212);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
